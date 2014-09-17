@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1409045199707.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5D60B737",
+    "lastKnownWriteTime" : 25896144540467314,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "tpadata",
+        "contentUrl" : "content?title=tpadata&file=7130ae5230f44fa8ad644427edc8c87d.htm",
+        "displayedObservations" : 232,
+        "displayedVariables" : 13,
+        "totalObservations" : 232,
+        "variables" : 13
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

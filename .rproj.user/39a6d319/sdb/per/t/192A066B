@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# Calculates Fleiss kappa statistic as a measure of inter-rater reliability\n# See http://en.wikipedia.org/wiki/Fleiss%27_kappa \n\nFleisskappa <- function( HoB )\n{\n  nplayers <- nrow(HoB) # Number of players, one per row (N)\n  nraters <- ncol(HoB)  # Number of judges (n)\n  \n  ratersAgreedBot <- vector()  # Number of judges that agree a player is a Bot\n # ratersAgreedHuman <- vector()  # Number of judges that agree a player is a Human\n  Pi <- vector()  # One Pi per player\n  \n  # Calculate number of judges that agree a player is a Bot\n  for (p in 1:nplayers)\n  {\n    nagreed <- 0\n    for (judge in 1:nraters)\n    {\n      if (HoB[p,judge] == \"Bot\")\n      {\n        nagreed <- nagreed + 1\n      }\n    }\n    ratersAgreedBot[p] <- nagreed\n  }\n  \n  # Calculate number of judges that agree a player is a Human\n#   for (p in 1:nplayers)\n#   {\n#     nagreed <- 0\n#     for (judge in 1:nraters)\n#     {\n#       if (HoB[p,judge] == \"Human\")\n#       {\n#         nagreed <- nagreed + 1\n#       }\n#     }\n#     ratersAgreedHuman[p] <- nagreed\n#   }\n  \n  # Calculate Pj\n  sumBotAgrees <- 0\n # sumHumanAgrees <- 0\n  for (i in 1:length(ratersAgreedBot))\n  {\n    sumBotAgrees <- sumBotAgrees + ratersAgreedBot[i]\n  #  sumHumanAgrees <- sumHumanAgrees + ratersAgreedHuman[i]\n  }\n  \n  Pjbot <- sumBotAgrees / (nraters*nplayers)\n # Pjhuman <- sumHumanAgrees / (sumBotAgrees+sumHumanAgrees)\n  \n  \n  # Calculate Pi values\n  for (p in 1:nplayers)\n  {  \n     Pi[p] <- (1/(nraters*(nraters-1))) \n     Pi[p] <-Pi[p] *\n              ((ratersAgreedBot[p]*ratersAgreedBot[p]) - nraters) \n  }\n\n  sumPi <- 0\n  \n  for(i in 1:length(Pi))\n  {\n    sumPi <- sumPi + Pi[i]\n  }\n   \n  P <- sumPi / nplayers\n   \n  Pe <- (Pjbot*Pjbot)# + (Pjhuman*Pjhuman) # There is only two categories (bot and human)\n  \n  K <- (P - Pe) / (1 - Pe)\n  \n  print(Pjbot)\n  #print(Pjhuman)\n  print(Pi)\n  print(sumPi)\n  print(P)\n  print(Pe)\n  print(K)\n\n  return(K)\n}\n",
+    "created" : 1409046798105.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4217159124",
+    "id" : "192A066B",
+    "lastKnownWriteTime" : 1410953111,
+    "path" : "C:/Users/Arrabales/botprize/FleissKappa.R",
+    "project_path" : "FleissKappa.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}

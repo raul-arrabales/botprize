@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1410203276238.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3BFBE051",
+    "lastKnownWriteTime" : 1,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "BotsTPAresults",
+        "contentUrl" : "content?title=BotsTPAresults&file=f7746ca2e4b147a3bced5870a2beec6b.htm",
+        "displayedObservations" : 6,
+        "displayedVariables" : 3,
+        "totalObservations" : 6,
+        "variables" : 2
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

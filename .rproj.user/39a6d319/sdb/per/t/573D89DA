@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1410203277290.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "573D89DA",
+    "lastKnownWriteTime" : 25896144533979137,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "AllRoundsNew",
+        "contentUrl" : "content?title=AllRoundsNew&file=ea0b0446bf394e5785a4310a8b8760e3.htm",
+        "displayedObservations" : 1000,
+        "displayedVariables" : 12,
+        "totalObservations" : 4340,
+        "variables" : 12
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

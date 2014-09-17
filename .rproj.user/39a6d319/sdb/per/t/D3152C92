@@ -1,0 +1,17 @@
+{
+    "contents" : "\n\njudgeHits <- function( rounds, judge )\n{\n  return (nrow(rounds[rounds$correct==\"yes\" & rounds$GuesserName == judge,]))\n}",
+    "created" : 1409306634196.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3995469506",
+    "id" : "D3152C92",
+    "lastKnownWriteTime" : 1405084020,
+    "path" : "C:/Users/Arrabales/botprize/judgeHits.R",
+    "project_path" : "judgeHits.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

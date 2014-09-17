@@ -1,0 +1,17 @@
+{
+    "contents" : "\n\n# Calculates Third-Person Assessment Average Judge Reliability\nTPAavgJR <- function( guesses )\n{\n  \n  # Total number of guesses\n  N <- nrow(guesses)\n  \n  CorrectGuesses <- nrow(guesses[(guesses$Guess == \"Machine\" & guesses$PlayerType == \"Bot\") |  \n                                 (guesses$Guess == \"Human\" & guesses$PlayerType == \"Human\"),])\n  \n  WrongGuesses <- N - CorrectGuesses\n\n  \n  return ( (CorrectGuesses - WrongGuesses) / N )\n  \n}",
+    "created" : 1409305865618.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2613119057",
+    "id" : "B4AA1559",
+    "lastKnownWriteTime" : 1409306859,
+    "path" : "C:/Users/Arrabales/botprize/TPAavgJR.R",
+    "project_path" : "TPAavgJR.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}

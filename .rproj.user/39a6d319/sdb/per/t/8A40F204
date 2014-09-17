@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# Returns a vector of humanness ratios for each bot, \n# based in the votes from the specified judge\n\nHumanness <- function( bots, rounds, judge )\n{\n  Hvector <- vector()\n  index <- 1\n  \n  for (bot in bots)\n  {\n    votes <- rounds[rounds$PlayerName == bot & rounds$GuesserName == judge, ]\n    misses <- rounds[rounds$PlayerName == bot & rounds$GuesserName == judge & rounds$correct == \"no\", ]          \n    Hvector[index] <- nrow(misses) / nrow(votes)\n    \n    # In case of no votes 0/0\n    if (!is.finite(Hvector[index]))\n    {\n      Hvector[index] <- 0\n    }\n    index <- index + 1\n  }\n  \n      \n  return(Hvector)\n}",
+    "created" : 1409055090799.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1310641387",
+    "id" : "8A40F204",
+    "lastKnownWriteTime" : 1408359288,
+    "path" : "C:/Users/Arrabales/botprize/Humanness.R",
+    "project_path" : "Humanness.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

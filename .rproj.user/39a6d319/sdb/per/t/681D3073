@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1409043212610.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "681D3073",
+    "lastKnownWriteTime" : 25896144533979137,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "BotMeasures",
+        "contentUrl" : "content?title=BotMeasures&file=bb28a0baca2c411983deef6fe14c9da3.htm",
+        "displayedObservations" : "6",
+        "displayedVariables" : 12,
+        "totalObservations" : "6",
+        "variables" : "11"
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

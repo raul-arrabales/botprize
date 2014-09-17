@@ -1,0 +1,17 @@
+{
+    "contents" : "\n\nCalculateHumanness <- function( rounds, JMeasures )\n{\n  # First column is the Bot Name\n  bots <- GetBots(rounds)\n  Measures <- data.frame( bots )\n  names(Measures)[1] <- \"BotName\"\n  \n  # Next columns are judges -  Unweighted humanness ratio\n  judges <- GetJudges(rounds)\n  for (judge in judges )\n  {\n   Measures[judge] <- cbind(Humanness(bots, rounds, judge))\n  }\n  \n  # Get the mean of all judges humanness ratios.\n  Measures[\"Humanness\"] <- rowMeans(Measures[2:ncol(Measures)], dims=1)\n  \n  # Next columns are judges - Weighted humanness ratio\n  for (judge in judges)\n  {\n    Measures[paste(\"W_\",judge, sep=\"\")] <- \n      JMeasures[JMeasures$judges == judge,]$Weight * # Current Judge Weighting factor\n      Measures[,judge]  # Unweighted hummannes ratio for this judge\n  }\n  \n  Measures[\"FPA\"] <- rowMeans(Measures[(2+length(judges)):ncol(Measures)], dims=1)\n  \n  \n  return(Measures)\n}",
+    "created" : 1409055063718.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1395123724",
+    "id" : "8EC42F56",
+    "lastKnownWriteTime" : 1406828077,
+    "path" : "C:/Users/Arrabales/botprize/CalculateHumanness.R",
+    "project_path" : "CalculateHumanness.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
