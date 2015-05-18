@@ -50,3 +50,5 @@ select tpa_data.GuessReason from tpa_data where tpa_data.Guess='Human';
 select tpa_data.GuessReason from tpa_data where tpa_data.Guess='Machine';
 
 
+
+INSERT OVERWRITE LOCAL DIRECTORY 'Desktop/botprize' select tpa_data.GuessReason from tpa_data where tpa_data.Guess='Machine'; 
