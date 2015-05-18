@@ -43,3 +43,10 @@ select * from raul_db.tpa_data;
 select * from raul_db.tpa_data where Player=6;
 
 desc tpa_data;
+
+
+
+select tpa_data.GuessReason from tpa_data where tpa_data.Guess='Human';
+select tpa_data.GuessReason from tpa_data where tpa_data.Guess='Machine';
+
+
