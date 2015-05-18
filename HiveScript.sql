@@ -10,3 +10,7 @@ row format delimited
 fields terminated by '\;'
 lines terminated by '\n'
 stored as textfile;
+
+LOAD DATA LOCAL INPATH 'Desktop/botprize/TPA_Data_v2.csv' INTO TABLE tpa_data;
+
+
