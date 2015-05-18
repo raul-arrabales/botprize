@@ -1,6 +1,23 @@
 
+HADOOP
+
+hadoop fs -ls
+
+hadoop fs -mkdir /botprize 
+
+hadoop fs -put Desktop/botprize/TPA_Data_v2.csv /botprize/TPA_Data_v2.csv
+
+hadoop fs -ls /botprize 
+
+
+
+
+BEELINE
 
 !connect jdbc:hive2://localhost:10000 scott tiger org.apache.hive.jdbc.HiveDriver 
+
+
+HIVE 
 
 create database raul_db;
 
@@ -13,6 +30,8 @@ lines terminated by '\n'
 stored as textfile;
 
 LOAD DATA LOCAL INPATH 'Desktop/botprize/TPA_Data_v2.csv' INTO TABLE tpa_data;
+
+load data inpath '/botprize/TPA_Data_v2.csv' overwrite into table tpa_data;
 
 show databases;
 
